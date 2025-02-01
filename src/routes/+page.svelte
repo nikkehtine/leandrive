@@ -1,2 +1,3 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<div class="min-h-screen bg-neutral-950 text-neutral-100">
+    <h1 class="text-3xl font-bold">Hello nerds</h1>
+</div>
