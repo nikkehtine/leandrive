@@ -1,38 +1,19 @@
-# sv
+# Lean Drive
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Google Drive clone in SvelteKit
 
-## Creating a project
+## Roadmap
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [ ] Create UI and mock data
+- [ ] Set up database and data model
+- [ ] Add authentication
+- [ ] Add file uploading
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Note from 01.02.2025
 
-# create a new project in my-app
-npx sv create my-app
-```
+Just finished up connecting database, next steps:
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- [ ] Update schema to show files and folders
+- [ ] Manually insert examples
+- [ ] Render them in the UI
+- [ ] Push and make sure it all works

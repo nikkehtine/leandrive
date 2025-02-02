@@ -1,20 +1,11 @@
-import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
+import { pgTable, serial, text, integer, timestamp } from "drizzle-orm/pg-core";
 
-export const user = sqliteTable("user", {
-    id: text("id").primaryKey(),
-    age: integer("age"),
+export const user = pgTable("user", {
+    id: serial("id").primaryKey(),
+    age: integer("age").notNull(),
     username: text("username").notNull().unique(),
-    passwordHash: text("password_hash").notNull(),
+    email: text("email").notNull().unique(),
 });
 
-export const session = sqliteTable("session", {
-    id: text("id").primaryKey(),
-    userId: text("user_id")
-        .notNull()
-        .references(() => user.id),
-    expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
-});
-
-export type Session = typeof session.$inferSelect;
-
-export type User = typeof user.$inferSelect;
+export type InsertUser = typeof user.$inferInsert;
+export type SelectUser = typeof user.$inferSelect;

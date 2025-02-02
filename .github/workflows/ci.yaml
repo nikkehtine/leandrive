@@ -14,9 +14,6 @@ jobs:
             - name: Copy .env
               run: cp .env.example .env
 
-            - name: Push DB
-              run: pnpm db:push
-
             - name: Typecheck
               run: pnpm check
 
